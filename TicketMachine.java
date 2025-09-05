@@ -17,6 +17,9 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    private int saving;
+    private int discount;
+    
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -26,6 +29,8 @@ public class TicketMachine
         price = cost;
         balance = 0;
         total = 0;
+        saving = price * discount;
+        discount = cost * 5 / 100;
     }
 
     /**
@@ -88,10 +93,10 @@ public class TicketMachine
             // Reduce the balance by the price.
             balance = balance - price;
         }
-        else {
+        /*else {
             System.out.printf("You must insert at least %d more cents.%n",
                               price - balance);
-        }
+        }*/
     }
 
     /**
