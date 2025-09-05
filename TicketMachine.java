@@ -55,6 +55,12 @@ public class TicketMachine
         return balance;
     }
     
+    public int emptyMachine(){
+        System.out.println("Withdrawal occuring..");
+        total = 0;
+        return total ;
+    }
+    
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
@@ -80,12 +86,14 @@ public class TicketMachine
     */
     /**
      * Print a ticket if enough money has been inserted, and
-     * reduce the current balance by the ticket price. Print
-     * an error message if more money is required.
+     * reduce the current balance by the ticket price. PrintuntLeftToPay* an error message if more money is required.
      */
     public void printTicket()
+
     {
-        if(balance >= price) {
+        int AmountLeftToPay;
+        AmountLeftToPay = price - balance;
+        if(AmountLeftToPay <= 0) {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
@@ -99,10 +107,10 @@ public class TicketMachine
             // Reduce the balance by the price.
             balance = balance - price;
         }
-        /*else {
+        else {
             System.out.printf("You must insert at least %d more cents.%n",
                               price - balance);
-        }*/
+        }
     }
 
     /**
@@ -116,4 +124,6 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+    
 }
