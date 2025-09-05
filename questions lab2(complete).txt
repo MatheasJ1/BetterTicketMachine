@@ -1,0 +1,164 @@
+2. You get 0 as the balance has been taken as the cost of the printed ticket.
+
+3. Let's say a ticket cost 15 cents. if you insert 30 cents you get 1 ticket and no 15 cent refund.
+If you don't put enough money, the ticket still prints as there isn't a if statement checking if 
+the balance is equal to the price thast is set.
+
+5. The ticket that is printed isn't any different than the first TicketMachine.
+
+7. If you remove class from the line public class TicketMachine, the Editor sends
+ an error and requests a class,record,enum or interface. The class diagram becomes overlayed with red X's,
+ meaning it is unable to compile.
+ 
+ You get different error messages depending on the type of error that is being reviewed. I personally don't think 
+ the error messages communicate enough to the user, especially if they are new to programming.
+ 
+ 8. It is possible to remove the public in TicketMachine and compile it. If you remove class,
+ it is not possible to compile.
+
+ 10. Field names : Price, Balance and Total.
+Constructors : public TicketMachine(int cost).
+Methods : TicketMachine(int cost),getPrice(), getBalance(), insertMoney(int Amount), printTicket().
+
+11. Methods have a return type but a constructor cannot have one. The word class and it being outside
+of the bracket also distinguishes it from methods.
+
+12. 1. int.
+	2.Student.
+	3.Server.
+
+13.
+	1. Alive.
+	2. Tutor.
+	3. Game.
+
+14.
+
+
+15. Yes it gives an error as the identifier is always expected first with the type right after and
+the field name last.
+
+16. Yes a semicolon is always required for field declarations.
+
+17. private int status; then give a value of type int to Status.
+
+18. To the Student class.
+
+19. It has two parameters. The types are String and double.
+
+20. The parameters are there for the user to fill out when calling out the method.
+String for title, double for price, int for ISBN.
+We know that there names and their types that's about it.
+
+21.
+public class Pet {
+	private String name;
+public Pet(String PetsName) {
+name = PetsName;
+}
+}
+
+22. public Date(String Month, int Day, int Year)
+
+23. The only thing that varies is the words Balance and Price.
+
+24. "How much money has the machine been given".
+
+25. No since only the name of the method has been changed and when we run the program,
+the computer is still gonna look for the value associated with balance, which follows the logic of the code.
+
+27. It gives a message saying that a return statement is expected.
+
+28. The difference between both are the return types for the print method its void 
+but can't be the same for a getPrice method since it's expecting 
+to return an integer
+
+29. void does not have  return type compared to int.
+
+31. 
+public void increaseScore(int points) {
+Total = points + score
+System.out.println(Total);
+}
+
+32. It is a mutator method.
+
+33.
+public void discount(int amount) {
+Price = price - amount;
+}
+
+34.
+public int Age(int currentAge){
+	return currentAge;
+}
+
+35.
+public boolean alive(){
+return alive;
+}
+
+36. it stays at 0 an does not update the price value anymore.
+
+37. "My cat has green eyes."
+
+39. They would all print out as strings.
+
+40. Would print "# price cents"
+
+42. It returns 0 but im pretty sure i should be getting the same value that the parameter.
+
+43. Gives me a illegal character error. It's basically a formatted version of the old print statement.
+
+44. Doesn't ask for a price sinc one is already set.
+
+45. One asks for amount the other doesn't.
+
+46. Does not take parameters and it is a mutator method.
+
+PROJECT 3 :
+
+
+47. I don't think the balance changes if an error pops up as the program hasn't run fully. If I enter the 
+value 0 nothing should change in the balance field. It asked me for a positive amount rather than 0.
+
+48. It now accepts 0 as a value because of the >=0.
+
+
+50. yes because the circle is either visible(true) or invisible (false).
+
+51. in BetterTicketMachine, the balance and amount fields only print if the amount is greater than 0 while the Naive one doesn't chek for that.
+
+52. The class still compiles, It now prints whenever and partially works as an if statement since if the first value is false it wont go to the
+ else part.
+
+53. No because the checks are still there for negative amounts so when we would get below 0 it would make a error trigger.
+
+55. saving = price * discount;
+
+56.mean = total / count;
+
+57. 
+public void affordable(int budget) {
+	if (budget<=price) {
+	System.out.println("This price isn't affordable for our budget");
+} else {
+	System.out.println("The budget of is over the price.");
+}
+}
+58.
+public void affordable(int budget) {
+	if (budget<=price) {
+	System.out.println("This price isn't affordable for our budget of " + budget);
+} else {
+	System.out.println("The budget of is over the price.");
+}
+}
+59. The written method only returns balance as 0 while the method in the class shows declaration of the amount
+to refund and associates it with the amount of money that had been inserted before the refund request.
+
+60. returning something before updating is value isn't the best thing to do but an error also pops
+up saying unreachable statement.
+
+61. int price should only be price. It compiles but there isn't any fields at all. I cannot tell you why 
+this is maybe the int at the start trigger it to not show any fields.
