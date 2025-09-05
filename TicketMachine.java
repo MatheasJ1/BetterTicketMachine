@@ -20,18 +20,24 @@ public class TicketMachine
     private int saving;
     private int discount;
     
-
+    public TicketMachine(int cost)
+    {
+        int price = cost;
+        balance = 0;
+        total = 0;
+    }
+    
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    /*public TicketMachine(int cost)
     {
         price = cost;
         balance = 0;
         total = 0;
         saving = price * discount;
         discount = cost * 5 / 100;
-    }
+    }*/
 
     /**
      * @Return The price of a ticket.
@@ -48,7 +54,7 @@ public class TicketMachine
     {
         return balance;
     }
-
+    
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
