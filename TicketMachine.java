@@ -50,14 +50,23 @@ public class TicketMachine
      */
     public void insertMoney(int amount)
     {
-        if(amount > 0) {
+        if(amount >= 0) {
             balance = balance + amount;
         }
         else {
             System.out.println("Use a positive amount rather than: " + amount);
         }
     }
-
+    
+    /*public void insertMoney2(int amount)
+    {     if(amount <= 0) {
+            System.out.println("Use a positive amount rather than: " + amount);
+        }
+        else {
+            balance = balance + amount;
+        }
+    }
+    */
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
